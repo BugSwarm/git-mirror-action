@@ -10,13 +10,13 @@ GIT_SSH_COMMAND="ssh -v"
 echo "SOURCE=$SOURCE_REPO"
 echo "DESTINATION=$DESTINATION_REPO"
 
-echo "Cloning..."
-git clone "git@github.com:$SOURCE_REPO.git"
-cd `basename "$SOURCE_REPO"`
-git remote set-url --push origin "git@github.com:$DESTINATION_REPO.git"
+echo "Cloning SOURCE_REPO..."
+git clone $SOURCE_REPO
 
-echo "Fetching..."
-git fetch -p origin
+cd `basename -s .git "$SOURCE_REPO"`
 
-echo "Pushing..."
+echo "Setting remote origin to DESTINATION_REPO..."
+git remote set-url --push origin $DESTINATION_REPO
+
+echo "Pushing to master..."
 git push origin master

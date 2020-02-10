@@ -1,6 +1,6 @@
 # Git Mirror Action
 
-A GitHub Action for [mirroring a git repository](https://help.github.com/en/articles/duplicating-a-repository#mirroring-a-repository-in-another-location) to another location via SSH.
+A GitHub Action for syncing the master branch between two git repositories via SSH.
 
 ## Inputs
 
