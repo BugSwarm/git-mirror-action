@@ -11,8 +11,9 @@ echo "SOURCE=$SOURCE_REPO"
 echo "DESTINATION=$DESTINATION_REPO"
 
 echo "Cloning..."
-git clone "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
-git remote set-url --push origin "$DESTINATION_REPO"
+git clone "git@github.com:$SOURCE_REPO.git"
+cd $SOURCE_REPO
+git remote set-url --push origin "git@github.com:$DESTINATION_REPO.git"
 
 echo "Fetching..."
 git fetch -p origin
