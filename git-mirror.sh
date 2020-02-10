@@ -14,7 +14,7 @@ git clone $SOURCE_REPO
 
 REPO_NAME=`basename -s .git $SOURCE_REPO`
 echo "REPO_NAME=$REPO_NAME"
-cd `basename -s .git $SOURCE_REPO`
+cd $REPO_NAME
 
 git remote set-url --push origin $DESTINATION_REPO
 
