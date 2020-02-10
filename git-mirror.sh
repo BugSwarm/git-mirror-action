@@ -12,7 +12,7 @@ echo "DESTINATION=$DESTINATION_REPO"
 
 git clone $SOURCE_REPO
 
-REPO_NAME=`basename -s .git $SOURCE_REPO`
+REPO_NAME=`basename $SOURCE_REPO .git`
 echo "REPO_NAME=$REPO_NAME"
 cd $REPO_NAME
 
