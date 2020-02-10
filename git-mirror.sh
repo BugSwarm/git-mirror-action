@@ -13,7 +13,7 @@ echo "DESTINATION=$DESTINATION_REPO"
 echo "Cloning SOURCE_REPO..."
 git clone $SOURCE_REPO
 
-cd basename -s .git $SOURCE_REPO
+cd `basename -s .git "$SOURCE_REPO"`
 
 echo "Setting remote origin to DESTINATION_REPO..."
 git remote set-url --push origin $DESTINATION_REPO
