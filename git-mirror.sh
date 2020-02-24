@@ -17,6 +17,8 @@ cd $SOURCE_REPO_NAME
 
 git remote set-url --push origin $DESTINATION_REPO
 
+git pull --prune
+
 # Use --force-with-lease to ensure we do not overwrite
 # someone elses work by force pushing
 git push origin master --force-with-lease
