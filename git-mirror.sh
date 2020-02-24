@@ -17,4 +17,4 @@ cd $SOURCE_REPO_NAME
 
 git remote set-url --push origin $DESTINATION_REPO
 
-git push --force-with-lease origin master
+git push --force origin master
